@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<h3>My Google Maps Demo</h3>
+<div>
+    <input id="punto-partida" type="text" placeholder="Indique punto de partida">
+    <input id="punto-destino" type="text" placeholder="Indique destino">
+<button id="trazarRuta">Trazar ruta</button>
+<button id="encuentrame">Encuéntrame</button>
+</div>
+<div id="map"></div>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXvpyhBGeW-f2bvRJFdGMo2pHSX-lc9NA&callback=initMap&libraries=places"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
