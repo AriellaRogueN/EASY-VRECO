@@ -45,10 +45,33 @@ var inputDestino = document.getElementById("punto-destino")
 new google.maps.places.Autocomplete(inputPartida);
 new google.maps.places.Autocomplete(inputDestino);
 
+
+
+var ds = new google.maps.DirectionService;
+var dr = new google.maps.DirectionRenderer;
+
+
+var calculateAndDisplayRoute = function(ds,dr){
+    ds.route({
+        origin: inputPartida.value,
+        destination: inputDestino.value,
+        travelMode: 'DRIVING'
+    }, function(response, status){
+        if(status === "OK"){
+            ds.setDirections(response);
+        } else {
+            window.alert("No encontramos una ruta");
+        }
+    })
 }
+ 
+ds.setmap(map);
+
+var trazarRuta = function () {
+    calculateAndDisplayRoute(ds,dr);
+};
+
+document.getElementById("trazar-ruta").addEventListener("click",trazarRuta);
 
 
-
-
-
-    
+};
