@@ -40,6 +40,11 @@ var funcionError = function (error) { //funcionError con un mensaje para el usua
     alert("tenemos un problema con encontrar tu ubicación");
 }
 
+var inputPartida = document.getElementById("punto-partida")
+var inputDestino = document.getElementById("punto-destino")
+new google.maps.places.Autocomplete(inputPartida);
+new google.maps.places.Autocomplete(inputDestino);
+
 }
 
 
